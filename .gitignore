@@ -1,0 +1,13 @@
+*.jpg
+*.mp4
+*.zip
+*.png
+*data*
+*images*
+*txt*
+*json*
+*rosbag*
+*checkpoint*
+*Identifier*
+*iml*
+*xml*
