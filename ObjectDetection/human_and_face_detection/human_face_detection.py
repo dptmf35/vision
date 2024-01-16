@@ -57,6 +57,10 @@ with mp_face_detection.FaceDetection(model_selection=0, min_detection_confidence
                 bboxC = detection.location_data.relative_bounding_box
                 ih, iw, ic = image.shape
                 x, y, w, h = int(bboxC.xmin * iw), int(bboxC.ymin * ih), int(bboxC.width * iw), int(bboxC.height * ih)
+                if y < 0 : 
+                    y = 0
+                if x < 0 :
+                    x = 0
                 ROI = image[y:y+h, x:x+w]
                 blur = cv2.GaussianBlur(ROI, (99, 99), 0)
                 image[y:y+h, x:x+w] = blur
