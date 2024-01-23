@@ -18,7 +18,7 @@ LABEL_COLORS = np.random.uniform(0, 255, size=(len(CLASSES), 3))
 
 cap = cv2.VideoCapture(0) 
 
-with mp_face_detection.FaceDetection(model_selection=0, min_detection_confidence=0.5) as face_detection:
+with mp_face_detection.FaceDetection(model_selection=1, min_detection_confidence=0.5) as face_detection:
     while cap.isOpened() :
         ret, frame = cap.read()
         if not ret : 
